@@ -1,0 +1,33 @@
+
+{% extends 'base.html' %}
+{% block body  %}
+
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-sm-8 offset-2">
+            <h3 class="border-bottom" style="font-family: cursive; color: chocolate">
+                UPDATE To-Do
+            </h3>
+            <form action="/edit/{{todo.sno}}" method="post">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Todo Title </label>
+                    <input type="text" class="form-control" value="{{todo.title}}" name="title" id="title" aria-describedby="emailHelp" />
+                </div>
+                <div class="mb-3">
+                    <label for="desc" class="form-label">Todo Description</label>
+                    <input type="text" class="form-control" value="{{todo.desc}}" name="desc" id="desc" />
+                </div>
+
+                <button type="submit" class="btn btn-primary">Update</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+    
+{% endblock body  %}
+
+
+
